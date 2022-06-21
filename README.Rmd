@@ -13,6 +13,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
   [![R-CMD-check](https://github.com/caravagnalab/pkgTemplate/workflows/R-CMD-check/badge.svg)](https://github.com/caravagnalab/pkgTemplate/actions)
+[![R-CMD-check](https://github.com/elena-buscaroli/pkgTemplate/workflows/R-CMD-check/badge.svg)](https://github.com/elena-buscaroli/pkgTemplate/actions)
 <!-- badges: end -->
 
 
@@ -64,3 +65,26 @@ To create an article:
 - `usethis::use_article("hello")`
   
   This will generate a file `hello.Rmd` in the `vignettes` folder.
+
+
+## To setup the GitHub actions workflows
+
+For each GitHub actions workflow, a file `.yml` is generated in `.github/workflows/`. The `.yml` contains a set of processes and commands run automatically each time a change is pushed in the repository.
+
+### `R-CMD-check` workflow
+`usethis::use_github_action_check_standard()` will create a workflow (with the `.yml` file) for the R CMD check. Each time a change is pushed, it will check check if the package can be build and installed.
+Note: by default, it will report an error even if only warnings are returned. To report a `fail` in the workflow only if errors are raised, change the last "process" in the `.yml` as follows:
+
+```
+  - uses: r-lib/actions/check-r-package@v1
+    with:
+      error-on: '"error"'
+```
+
+### `pkgdown` workflow
+
+
+## References
+
+\url{https://r-pkgs.org/index.html} Good reference to build a R package. In particular the sections `Git and GitHub` and `Automated checking`.
+
