@@ -23,6 +23,14 @@ Content related to the package:
 
 -   `R`: contains all the `R` scripts of the package.
 
+## To create an empty package from RStudio
+
+1.  `File`
+2.  `New Project`
+3.  `New Directory`
+4.  `R Package`
+5.  Set the package name and the location on disk
+
 ## Other functions
 
 To load the functions without installing the package (from inside the
