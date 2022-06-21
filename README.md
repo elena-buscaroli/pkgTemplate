@@ -34,7 +34,7 @@ Content related to the package:
 ## Other functions
 
 To load the functions without installing the package (from inside the
-package repository):
+package directory):
 
 -   `devtools::load_all()`
 
