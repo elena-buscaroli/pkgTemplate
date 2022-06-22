@@ -80,7 +80,6 @@ From the `usethis` package documentation
 <https://usethis.r-lib.org/reference/use_pkgdown.html>:
 
 -   `usethis::use_pkgdown()`
--   `usethis::use_github_pages()`
 -   `usethis::use_github_action("pkgdown")`
 
 This creates
